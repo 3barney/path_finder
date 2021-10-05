@@ -1,0 +1,5 @@
+server:
+  port: 9010
+application:
+  endpoint:
+    countries: "https://raw.githubusercontent.com/mledoze/countries/master/countries.json"

@@ -1,0 +1,65 @@
+[
+  {
+    "borders": [
+      "ETH",
+      "SOM",
+      "SSD",
+      "TZA",
+      "UGA"
+    ],
+    "cca3": "KEN"
+  },
+  {
+    "borders": [
+      "DJI",
+      "ERI",
+      "KEN",
+      "SOM",
+      "SSD",
+      "SDN"
+    ],
+    "cca3": "ETH"
+  },
+  {
+    "borders": [
+      "CAF",
+      "COD",
+      "ETH",
+      "KEN",
+      "SDN",
+      "UGA"
+    ],
+    "cca3": "SSD"
+  },
+  {
+    "borders": [
+      "DJI",
+      "ETH",
+      "KEN"
+    ],
+    "cca3": "SOM"
+  },
+  {
+    "borders": [
+      "BDI",
+      "COD",
+      "KEN",
+      "MWI",
+      "MOZ",
+      "RWA",
+      "UGA",
+      "ZMB"
+    ],
+    "cca3": "TZA"
+  },
+  {
+    "borders": [
+      "COD",
+      "KEN",
+      "RWA",
+      "SSD",
+      "TZA"
+    ],
+    "cca3": "UGA"
+  }
+]
