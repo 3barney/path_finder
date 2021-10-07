@@ -4,7 +4,7 @@ RouteTest is a Spring boot application that calculates shortests distance betwee
 
 ## Installation
 
-Clone the project from the repo.
+Clone the project from the repo https://github.com/3barney/path_finder
 
 To start the application run:
 
