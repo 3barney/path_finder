@@ -16,7 +16,6 @@ import java.util.stream.Stream;
 @Service
 public class CountryServiceImpl implements CountryService {
 
-
     private final String countriesEndpoint;
     private final RestTemplate restTemplate;
 
