@@ -64,7 +64,7 @@ class CountryServiceTest {
     void when_getCountries_expect_listOfCountries() {
         var countryList = countryService.getCountries();
         mockRestServiceServer.verify();
-        assertEquals(6, countryList.size());
+        assertEquals(7, countryList.size());
     }
 
     @Test

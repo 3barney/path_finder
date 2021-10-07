@@ -1,7 +1,9 @@
 package com.routing.test.RoutingTest.controller;
 
 import com.routing.test.RoutingTest.dto.response.Route;
+import com.routing.test.RoutingTest.exception.CountryNotFoundException;
 import com.routing.test.RoutingTest.exception.NetworkServiceException;
+import com.routing.test.RoutingTest.exception.RouteNotFoundException;
 import com.routing.test.RoutingTest.service.RouteService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -23,10 +25,10 @@ public class RouteController {
         this.routeService = routeService;
     }
 
-    @Operation(summary = "Calculate any possible land route from one country to another", responses = {
+    @Operation(summary = "Calculate any route between two countries using cca3 country name {KENYA -> KEN}", responses = {
             @ApiResponse(responseCode = "200", description = "Route found"),
-            @ApiResponse(responseCode = "400", description = "Route impossible or country not found", content = @Content(schema = @Schema(hidden = true))),
-            @ApiResponse(responseCode = "500", description = "Data service failure", content = @Content(schema = @Schema(hidden = true))) })
+            @ApiResponse(responseCode = "400", description = "Route or country not found", content = @Content(schema = @Schema(hidden = true))),
+            @ApiResponse(responseCode = "500", description = "Network failure", content = @Content(schema = @Schema(hidden = true))) })
     @GetMapping(value = "/route/{origin}/{destination}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Route getAllRoutes(@PathVariable String origin, @PathVariable String destination) {
 
@@ -34,6 +36,8 @@ public class RouteController {
             return routeService.findPath(origin, destination);
         } catch (NetworkServiceException ex) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage(), ex);
+        } catch (RouteNotFoundException | CountryNotFoundException ex) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, ex.getMessage(), ex);
         }
     }
 }

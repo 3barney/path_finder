@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.routing.test</groupId>
-	<artifactId>RoutingTest</artifactId>
+	<artifactId>routing_test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>RoutingTest</name>
+	<name>routing_test</name>
 	<description>Demo project for shortest distance between two positions</description>
 
 	<properties>
